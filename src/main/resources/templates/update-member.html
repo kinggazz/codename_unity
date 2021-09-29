@@ -10,5 +10,8 @@
     <label for="email">Email</label>
     <input type="text" th:field="*{email}" id="email" placeholder="Email">
     <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+    <label for="role">Role</label>
+    <input type="text" th:field="*{role}" id="role" placeholder="Role">
+    <span th:if="${#fields.hasErrors('role')}" th:errors="*{role}"></span>
     <input type="submit" value="Update Member">   
 </form>

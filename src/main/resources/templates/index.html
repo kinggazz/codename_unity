@@ -9,6 +9,7 @@
                     <tr>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Role</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -17,6 +18,7 @@
                 <tr th:each="member : ${members}">
                     <td th:text="${member.name}"></td>
                     <td th:text="${member.email}"></td>
+                    <td th:text="${member.role}"></td>
                     <td><a th:href="@{/edit/{id}(id=${member.id})}">Edit</a></td>
                     <td><a th:href="@{/delete/{id}(id=${member.id})}">Delete</a></td>
                 </tr>

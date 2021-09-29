@@ -18,12 +18,13 @@ public class MemberController {
 	
 	@GetMapping("/signup")
 	public String showSignUpForm(Member member) {
+		
 		return "add-member";
 	}
 	
-	@PostMapping("addmember")
+	@PostMapping("/addmember")
 	public String addMember (@Valid Member member, BindingResult result, Model model) {
-		
+	
 		if(result.hasErrors()) {
 			return "add-member";
 		}
